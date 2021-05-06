@@ -220,6 +220,34 @@ body{
     letter-spacing: 1px;
   }
   
-  .steps-content{
-  
-  }
+  /* table css */
+
+.table-responsive{
+    max-height:500px;
+    overflow-y:hidden;
+}
+
+.table-responsive:hover{
+  overflow-y: visible;
+}
+
+/* width */
+.table-responsive::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.table-responsive::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
