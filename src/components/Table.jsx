@@ -1,13 +1,17 @@
 import * as React from 'react';
 
-export default function DataTable(props) {
+const Posts = ({ posts, loading }) => {
+    if (loading) {
+        return <h2>Loading...</h2>;
+    }
+
     return (
-        <div className="row">
+        <div className="row" >
             <div className="container">
                 <div className="col-md-6 offset-md-3">
-                    <div class="table-responsive mt-5">
-                        <table class="table table-sm table-hover caption-top">
-                            {/* <caption className="text-center text-dark -primary lead">List of users</caption> */}
+                    <div className="table-responsive mt-5">
+                        <table className="table table-sm table-bordered border-dark caption-top">
+                            <caption className="text-center text-dark -primary lead">List of users</caption>
                             <thead className="table-dark">
                                 <tr>
                                     <th scope="col">ID</th>
@@ -18,8 +22,8 @@ export default function DataTable(props) {
                             </thead>
                             <tbody>
                                 {
-                                    props.item.data && props.item.data.map((s, index) => (
-                                        <tr key={s.id} className="table-border table-primary">
+                                    posts && posts.map((s, index) => (
+                                        <tr key={s.id} className="table-border">
                                             <th scope="row text-center">{s.id}</th>
                                             <td>{s.employee_name}</td>
                                             <td>{s.employee_salary}</td>
@@ -32,7 +36,8 @@ export default function DataTable(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
+export default Posts;
