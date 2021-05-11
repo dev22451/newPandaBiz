@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import { CalendarComponent, Inject } from '@syncfusion/ej2-react-calendars';
 import { Agenda, Day, Month, ScheduleComponent, Week, WorkWeek } from '@syncfusion/ej2-react-schedule';
+import LoginPage from './containers/LoginPage'
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -48,21 +49,18 @@ function App() {
       <Link to="/"></Link>
       <Switch>
         <Route exact path="/">
-          <Main />
+          <LoginPage />
         </Route>
         <Route path="/schedule">
           <div className="col-md-6 offset-md-3 mt-5">
-            <ScheduleComponent>
+            <ScheduleComponent cssClass='schedule-cell-dimension'>
               <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
             </ScheduleComponent>
           </div>
         </Route>
         <Route path="/calendar">
           <div className="col-md-4 offset-md-5 mt-5">
-            <CalendarComponent
-              event={MouseEvent}
-              name={'hello'}
-            />
+            <CalendarComponent />
           </div>
         </Route>
         <Route path="/table">
