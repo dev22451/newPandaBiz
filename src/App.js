@@ -14,7 +14,7 @@ import {
   Link
 } from "react-router-dom";
 import { CalendarComponent, Inject } from '@syncfusion/ej2-react-calendars';
-import { Agenda, Day, Month, ScheduleComponent, Week, WorkWeek } from '@syncfusion/ej2-react-schedule';
+import { Agenda, Day, Month, ScheduleComponent, ViewDirective, ViewsDirective, Week, WorkWeek } from '@syncfusion/ej2-react-schedule';
 import LoginPage from './containers/LoginPage'
 
 function App() {
@@ -42,20 +42,26 @@ function App() {
 
   // Change Page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
   return (
     <Router>
-
       <Link to="/"></Link>
       <Switch>
         <Route exact path="/">
           <LoginPage />
         </Route>
         <Route path="/schedule">
-          <div className="col-md-6 offset-md-3 mt-5">
-            <ScheduleComponent cssClass='schedule-cell-dimension'>
-              <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-            </ScheduleComponent>
+          <div className="row">
+            <div className="col-md-4 offset-md-4 mt-5">
+              <ScheduleComponent cssClass='schedule-cell-dimension'>
+                <ViewsDirective>
+                  <ViewDirective option='Month' />
+                  <ViewDirective option='Day' />
+                  <ViewDirective option='Week' />
+                  <ViewDirective option='Month' />
+                </ViewsDirective>
+                <Inject services={[Day, Week, Month]} />
+              </ScheduleComponent>
+            </div>
           </div>
         </Route>
         <Route path="/calendar">
