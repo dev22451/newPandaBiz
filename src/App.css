@@ -304,10 +304,101 @@ body.highcontrast #date_label {
 
 .e-schedule{
   border-radius: 8px;
-  border: none;
+  /* border: 2px solid #13b5ea; */
+  box-shadow: 7px 7px 17px 8px rgb(0 0 0 / 20%);
 }
 
-.e-schedule .e-month-view .e-other-month{
+.e-week-view, .e-vertical-view .template-wrap{
+  padding-top: 10px;
+}
+
+.e-month-view .subject{
+  background-color: transparent;
+}
+
+.template-wrap{
+  /* background-color: #f44336; */
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: cursive;
+  font-weight: 600;
+  font-size: 14px;
+  /* border-radius: 4px; */
+}
+
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment{
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment:hover{
+  transform: translate(0, -8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.e-quick-popup-wrapper .e-event-popup .e-popup-header {
+  background: #FF4048;
+}
+
+.subject{
+  /* border-bottom:1px solid white; */
+  /* background-color: #FF4048; */
+  padding:0px 2px 2px 5px;
+  border-radius: 1px;
+  letter-spacing: 1px;
+}
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment:hover{
+  box-shadow: 0 px 5px 7px 8px rgb(0 0 0 / 20%);
+}
+
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment{
+  border-radius: 8px;
+}
+
+
+.template-wrap .location i{
+  color: yellow;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.template-wrap .location{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  margin-top: 3px;
+}
+
+
+.template-wrap .timedesc{
+  font-size: 14px;
+  font-weight: 600;
+  font-family: cursive;
+}
+
+.time{
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: lighter;
+  word-break: break-all;
+  letter-spacing: 1px;
+  /* white-space: pre-wrap; */
+}
+
+/* Hide all-day row events */
+/* .e-schedule .e-date-header-wrap .e-schedule-table thead {
+  display: none;
+} */
+
+
+/* .e-schedule .e-month-view .e-work-cells{
+  border: none;
+  height: 40px;
+  vertical-align: middle;
+} */
+
+
+/* .e-schedule .e-month-view .e-other-month{
   background-color: white;
   color: white;
 }
@@ -316,11 +407,6 @@ body.highcontrast #date_label {
   color: #fff;
 }
 
-.e-schedule .e-month-view .e-work-cells{
-  border: none;
-  height: 40px;
-  vertical-align: middle;
-}
 
 .e-schedule .e-month-view .e-date-header{
   margin-left: 20px;
@@ -328,7 +414,7 @@ body.highcontrast #date_label {
 
 .e-schedule .e-month-view .e-date-header-wrap table td{
   border: none;
-  color: #b99898;
+  color: #7f8b8f;
 }
 
 .e-schedule .e-month-view .e-current-date .e-date-header{
@@ -341,3 +427,41 @@ body.highcontrast #date_label {
   font-family: cursive;
 }
 
+.e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn.e-btn{
+  background-color: #13b5ea;
+}
+
+.e-schedule .e-schedule-toolbar .e-toolbar-items.e-tbar-pos{
+  background-color: #13b5ea;
+}
+
+.e-schedule .e-schedule-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn .e-tbar-btn-text {
+  color: #F5F6FA;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+.e-schedule .e-schedule-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn .e-tbar-btn-text:hover {
+  color: #181818;
+}
+
+.e-schedule .e-schedule-toolbar .e-hor-nav{
+  background: #13b5ea;
+  border-left: none;
+}
+
+.e-toolbar .e-icons{
+  color: #fff;
+}
+.e-toolbar .e-icons:hover{
+  background-color: #13b5ea;
+  color: #181818;
+}
+
+.e-schedule .e-schedule-toolbar .e-hor-nav:hover{
+  background-color: #13b5ea;
+}
+
+.e-schedule .e-schedule-toolbar .e-toolbar-items .e-toolbar-left .e-tbar-btn.e-icon-btn:hover{
+  background-color: #13b5ea;
+} */
